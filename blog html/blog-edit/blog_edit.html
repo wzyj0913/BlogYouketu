@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="blog_edit_style.css">
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <div>
+                <img src="/login/header.jpeg" alt="">
+            </div>
+            <ul class="list">
+                <li class="list-1">usernameの表示</li>
+                <li class="list-1"><a href="" class="list-2">記事一覧</a></li>
+                <li class="list-1"><a href="" class="list-2">記事登録</a></li>
+                <li class="list-1"><a href="" class="list-2">ログアウト</a></li>
+            </ul>
+        </div>
+
+    </header>
+
+    <main>
+        <h1>記事編集</h1>
+        <div class="registration-container">
+            <h2>編集</h2>
+            <form>
+                <div>
+                    <div class="form-group">
+
+                        <label for="blog_name">記事名</label>
+                        <input type="text" id="blog_name" name="blog_name" required placeholder="記事名を入力してください">
+                    </div>
+                    <div class="form-group">
+                        <label for="blog_image">画像</label>
+                        <input type="file" id="blog_image" name="blog_image" required >
+                    </div>
+                    <div class="form-group">
+                        <label for="blog_content">記事内容</label>
+                        <textarea name="productDescription" placeholder="記事内容を入力してください"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="button" type="submit">編集</button>
+                    <button class="back-btn" onclick="history.back();" type="button">戻る</button>
+                </div>
+            </form>
+            <form action="" method="post">
+                <div class="">
+                    <input type="hidden" name="productId" th:value="${productList.productId}">
+                    <button class="register">削除</button>
+                </div>
+            </form>
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>
