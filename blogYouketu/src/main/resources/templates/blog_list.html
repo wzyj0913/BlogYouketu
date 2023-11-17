@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>list</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="blog_list_style.css">
+    <link rel="stylesheet" th:href="@{/css/normalize.css}">
+    <link rel="stylesheet" th:href="@{/css/blog_list_style.css}">
 </head>
 
 <body>
     <header>
         <div class="inner">
             <ul class="list">
-                <li class="list-1">usernameの表示</li>
+                <li class="list-1" th:text="${userName}"></li>
                 <li class="list-1"><a href="" class="list-2">記事一覧</a></li>
                 <li class="list-1"><a href="" class="list-2">記事登録</a></li>
-                <li class="list-1"><a href="" class="list-2">ログアウト</a></li>
+                <li class="list-1"><a th:href="@{/logout}" class="list-2">ログアウト</a></li>
             </ul>
         </div>
 
@@ -30,15 +30,13 @@
         <div>
             <h2 class="h2">記事一覧</h2>
             <div class="flex">
-                <article>
-
-                    <ul class="blog">
+                <article th:each="blog:${blogList}">
+                       <ul class="blog">
                         <li>
-                            <a href="">
+                            <a th:href="@{/blog/edit/{blogId}(blogId=${blog.blogId})}">
                                 <img src="/login/cod.jpg" alt="" class="blog-img">
-                                <p text="">title</p><br>
-                                <p text="">内容</p>
-
+                                <p th:text="${blog.blogTitle}">title</p><br>
+                                <p th:text="${blog.blogContent}">内容</p>
                             </a>
                         </li>
                     </ul>

@@ -3,29 +3,30 @@ body{
     background-image:url(/login/cod1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 
 }
 
 header{
-    color: rgb(246, 7, 35);
-    width: 70%;
-    height: 160px;
-}
-header img {
+    background-color: #0f0e0e;
+    color: rgb(248, 248, 248);
     width: 100%;
-    height: 160px;
-    object-fit: none;
+    height: 50px;
+    padding: 0.1%;
 }
+
 ul{
     display: flex;
     list-style: none;
 }
 .list-1{
-    width: 310px;
+    width: 100%;
 }
 .list-2{
+    background-color: rgb(226, 229, 229);
+    border-radius: 5px;
     text-decoration: none;
-    color: rgb(255, 180, 127);
+    color: rgb(13, 13, 12);
 }
 
 h1{
@@ -36,10 +37,10 @@ h1{
 main{
     width: 70%;
     padding: 50px;
+   
 }
 
 .registration-container{
-
     margin-left: 20%;
     background-image:url(/login/cod1.jpg);
     background-size: cover;
@@ -48,12 +49,14 @@ main{
     height: 600PX;
     text-align: center;
     border-radius: 25px;
-    color: rgb(246, 7, 35);
+    color: rgb(255, 180, 127);
     margin-bottom: 100px;
   }
 
 .form-group{
-    padding: 30px;
+    margin: 40px auto;
+    width: 100%;
+    
    }
 
 input{
@@ -63,19 +66,31 @@ input{
 }
 .button{
     border-radius: 5px;
-    background-color:bisque;
-    color:rgb(246, 7, 35);
+    background-color:rgb(57, 57, 56);
+    color:rgb(255, 180, 127);
 }
 .back-btn{
     border-radius: 5px;
-    background-color:bisque;
-    color:rgb(246, 7, 35);
+    background-color:rgb(57, 57, 56);
+    color:rgb(255, 180, 127);
 }
 
 textarea{
     background-color:bisque;
+    resize: none;
     width: 80%;
-    height:30%;
+    height:250px;
+    vertical-align: middle;  
     
     
+}
+footer{ position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #0f0e0e; 
+    padding: 10px;
+    color: aliceblue;
+
 }

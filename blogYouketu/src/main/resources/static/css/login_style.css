@@ -1,6 +1,6 @@
 body{
     width: 100%;
-    background-image:url(./cod1.jpg);
+    background-image:url(../img/cod1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -22,7 +22,7 @@ main{
 
 .login-container{
     margin-left: 12%;
-    background-image:url(./cod1.jpg);
+    background-image:url(../img/cod1.jpg);
     background-size: cover;
     padding: 20px;
     width: 350px;

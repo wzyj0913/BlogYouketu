@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>register</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="register_style.css">
+    <link rel="stylesheet" th:href="@{/css/normalize.css}">
+    <link rel="stylesheet" th:href="@{/css/register_style.css}">
 </head>
 <body>
    
@@ -14,7 +14,7 @@
         <h1 class="account"> アカウント作成</h1>
     <div class="registration-container">
         <h2>Register</h2>
-        <form>
+        <form th:action="@{/register/process}" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required placeholder="ユーザー名を入力してください">
@@ -31,7 +31,7 @@
                 <button class="button" type="submit">登録</button>
             </div>
         </form>
-        <p>ログイン画面は <a href="#" onclick="" class="link-color">ここを</a>.</p>
+        <p>ログイン画面は <a th:href="@{/login}" onclick="" class="link-color">ここを</a>.</p>
        
     </div>
     

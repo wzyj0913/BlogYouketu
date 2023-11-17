@@ -1,26 +1,28 @@
 body{
-    width: 90%;
+    width: 100%;
     background-image:url(/login/cod.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 
 }
 
 
 
 main{
-    margin: 10%;
+    
     width: 100%;
     
 }
 .account{
     color: red;
-    margin-left: 22%;
+    margin-top: 8%;
+    margin-left: 18%;
     margin-bottom: 30px;
 }
 
 .registration-container{
-
+    
     margin-left: 12%;
     background-image:url(/login/cod.jpg);
     background-size: cover;
@@ -53,7 +55,8 @@ footer{ position: fixed;
     left: 0;
     width: 100%;
     text-align: center;
-    background-color: #f0f0f0; 
+    background-color: #030303; 
     padding: 10px;
+    color: aliceblue;
 
 }

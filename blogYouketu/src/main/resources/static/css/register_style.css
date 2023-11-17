@@ -1,6 +1,6 @@
 body{
     width: 100%;
-    background-image:url(./cod1.jpg);
+    background-image:url(../img/cod.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -10,27 +10,29 @@ body{
 
 
 main{
+    
     width: 100%;
-  
+    
 }
-.welcome {
-    color: rgb(255, 180, 127);
+.account{
+    color: red;
     margin-top: 8%;
-    margin-left: 18.7%;
+    margin-left: 18%;
     margin-bottom: 30px;
 }
 
-.login-container{
+.registration-container{
+    
     margin-left: 12%;
-    background-image:url(./cod1.jpg);
+    background-image:url(../img/cod.jpg);
     background-size: cover;
     padding: 20px;
-    width: 350px;
+    width: 400px;
     height: 300PX;
     text-align: center;
     border-radius: 25px;
-    color: rgb(255, 180, 127);
-    margin-bottom: 100px;
+    color: rgb(246, 7, 35);
+    
     
 
 
@@ -41,19 +43,19 @@ input{
 
 }
 .button{
-    border-radius: 25px;
-    background-color:rgb(57, 57, 56);
-    color:rgb(255, 180, 127);
+    border-radius: 5px;
+    background-color:bisque;
+    color:rgb(246, 7, 35);
 }
 .link-color{
-    color: bisque;
+    color: brown;
 }
 footer{ position: fixed; 
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
-    background-color: #080808; 
+    background-color: #030303; 
     padding: 10px;
     color: aliceblue;
 
