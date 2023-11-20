@@ -16,21 +16,29 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 
 @Entity
-@Table(name="blog")
+@Table(name = "blog")
 public class BlogEntity {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	
-private long blogId;
-	
-	
+	@GeneratedValue(strategy = GenerationType.AUTO)
+
+	private long blogId;
+
 	private String blogTitle;
-	
+
 	private String blogImage;
-	
+
 	private String blogContent;
-	
-	private String userId;
+
+	private Long userId;
+
+	public BlogEntity(String blogTitle, String blogImage, String blogContent, Long userId) {
+
+		this.blogTitle = blogTitle;
+		this.blogImage = blogImage;
+		this.blogContent = blogContent;
+		this.userId = userId;
+	}
+
 	
 
 }

@@ -1,6 +1,6 @@
 body{
     width: 100%;
-    background-image:url(/login/cod1.jpg);
+    background-image:url(../img/cod1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -42,7 +42,7 @@ main{
 
 .registration-container{
     margin-left: 20%;
-    background-image:url(/login/cod1.jpg);
+    background-image:url(../img/cod1.jpg);
     background-size: cover;
     padding: 20px;
     width: 550px;
