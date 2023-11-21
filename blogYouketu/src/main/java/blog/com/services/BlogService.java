@@ -53,7 +53,7 @@ public class BlogService {
 	   }
 	}
 	//削除する
-	public boolean deleteblog(Long blogId) {
+	public boolean deleteBlog(Long blogId) {
 		if(blogId==null) {
 			return false;
 		}else {

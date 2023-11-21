@@ -13,7 +13,7 @@
     <header>
         <div class="inner">
             <ul class="list">
-                <li class="list-1"><a href="" th:text="${userName}"></a></li>
+                <li class="list-1"><a href="" th:text="${userName}" class="list-2"></a></li>
                 <li class="list-1"><a th:href="@{/blog/list}" class="list-2">記事一覧</a></li>
                 <li class="list-1"><a th:href="@{/blog/register}" class="list-2">記事登録</a></li>
                 <li class="list-1"><a th:href="@{/logout}" class="list-2">ログアウト</a></li>
@@ -26,12 +26,11 @@
         <h1>記事編集</h1>
         <div class="registration-container">
             <h2>編集</h2>
-            <form th:action"@{/blog/edit/process}" method="post" enctype="multipart/form-data" >
-                <div>
+            <form th:action="@{/blog/edit/process}" method="post" enctype="multipart/form-data" >
+				<div>
                     <div class="form-group">
-
                         <label for="blog_name">記事名</label>
-                        <input type="text" id="blog_name" name="blogTitle" th:value="${blog.blogTitle}" required placeholder="記事名を入力してください">
+                        <input type="text" id="blog_name" name="blogTitle" th:value="${blog.blogTitle}" >
                     </div>
                     <div class="form-group">
                         <label for="blog_image">画像</label>
@@ -39,7 +38,7 @@
                     </div>
                     <div class="form-group">
                         <label for="blog_content">記事内容</label>
-                        <textarea name="blogContent" placeholder="記事内容を入力してください" th:text"${blog.blogContent}" ></textarea>
+                        <textarea name="blogContent" th:text="${blog.blogContent}" ></textarea>
                     </div>
                 </div>
                 <div class="form-group">
@@ -50,7 +49,7 @@
             </form>
             <form th:action="@{/blog/delete}" method="post">
                 <div class="">
-                    <input type="hidden" name="blogId" th:value="${blog.blogId}">
+					<input type="hidden" name="blogId" th:value="${blog.blogId}">
                     <button class="del-btn">削除</button>
                 </div>
             </form>

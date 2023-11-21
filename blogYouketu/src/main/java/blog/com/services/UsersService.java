@@ -11,9 +11,9 @@ public class UsersService {
 	@Autowired
 	private UsersDao usersDao;
 
-	public boolean createUsers(String username, String email, String password) {
+	public boolean createUsers(String name, String email, String password) {
 		if (usersDao.findByEmail(email) == null) {
-			usersDao.save(new UsersEntity(username, email, password));
+			usersDao.save(new UsersEntity(name, email, password));
 			return true;
 		} else {
 			return false;

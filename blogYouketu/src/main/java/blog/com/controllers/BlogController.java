@@ -47,7 +47,7 @@ public class BlogController {
 	if(users==null) {
 		return "redirect:/login";
 	}else {
-		model.addAttribute("usersName",users.getUserName());
+		model.addAttribute("userName",users.getUserName());
 		return"blog_register.html";
 	}
 		
@@ -91,6 +91,7 @@ public class BlogController {
     			 return"redirect:/blog/list";
     		 }else {
     			 model.addAttribute("blog",blogList);
+    			 model.addAttribute("userName",users.getUserName());
     		 }
     		 return "blog_edit.html";
     	 }
@@ -116,21 +117,21 @@ public class BlogController {
     		 if(blogService.editBlog(blogId, blogTitle, fileName, blogContent,users.getUserId())){
     			return "redirect:/blog/list"; 
     		 }else {
-    			 return"redirect:/blog/edit"+blogId;
+    			 return"redirect:/blog/edit/"+blogId;
     		 }
     		 
     	 }
      }
-     @PostMapping("/product/delete")
+     @PostMapping("/blog/delete")
      public String delete(@RequestParam Long blogId) {
     	 UsersEntity users=(UsersEntity)session.getAttribute("users");
     	 if(users==null) {
     		 return"redirect:/login";
     	 }else {
-    		 if(blogService.deleteblog(blogId)) {
+    		 if(blogService.deleteBlog(blogId)) {
     			 return"redirect:/blog/list";
     		 }else {
-    			 return"redirect:/blog/edit"+blogId;
+    			 return"redirect:/blog/edit/"+blogId;
     		 }
     	 }
     	 
