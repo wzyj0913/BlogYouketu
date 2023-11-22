@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" th:href="@{/css/normalize.css}">
+	<link rel="stylesheet" th:href="@{/css/mypage.css}">
+</head>
+
+<body>
+	<header>
+		<div class="inner">
+			<ul class="list">
+				<li class="list-1"><a th:href="@{/mypage}" th:text="${userName}" class="list-2"></a></li>
+				<li class="list-1"><a th:href="@{/blog/list}" class="list-2">記事一覧</a></li>
+				<li class="list-1"><a th:href="@{/blog/register}" class="list-2">記事登録</a></li>
+				<li class="list-1"><a th:href="@{/logout}" class="list-2">ログアウト</a></li>
+			</ul>
+		</div>
+
+	</header>
+	<main>
+		<div class="text1">
+			<h1>私の自己紹介</h1>
+			<p>初めまして！私は楊と申します。</p>
+		</div>
+		<div class="text2">
+			<div class="flex">
+				<div class="text2-1">
+					<h2>興味</h2>
+					<p class="p-1">ゲーム</p>
+					<p class="p-1">バスケ</p>
+					<p class="p-1">ドライブ</p>
+				</div>
+				<div class="text2-2">
+					<img th:src="@{/img/cod.jpg}" class="img-1">
+				</div>
+			</div>
+		</div>
+
+
+	</main>
+	<footer>
+		<small>&copy; 2023 youketu </small>
+	</footer>
+</body>
+
+</html>

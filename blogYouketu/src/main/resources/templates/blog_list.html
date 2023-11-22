@@ -2,68 +2,71 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>list</title>
-    <link rel="stylesheet" th:href="@{/css/normalize.css}">
-    <link rel="stylesheet" th:href="@{/css/blog_list_style.css}">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>list</title>
+	<link rel="stylesheet" th:href="@{/css/normalize.css}">
+	<link rel="stylesheet" th:href="@{/css/blog_list_style.css}">
 </head>
 
 <body>
-    <header>
-        <div class="inner">
-            <ul class="list">
-                <li class="list-1"><a href="" th:text="${userName}" class="list-2"></a></li>
-                <li class="list-1"><a th:href="@{/blog/list}" class="list-2">記事一覧</a></li>
-                <li class="list-1"><a th:href="@{/blog/register}" class="list-2">記事登録</a></li>
-                <li class="list-1"><a th:href="@{/logout}" class="list-2">ログアウト</a></li>
-            </ul>
-        </div>
+	<header>
+		<div class="inner">
+			<ul class="list">
+				<li class="list-1"><a th:href="@{/mypage}" th:text="${userName}" class="list-2"></a></li>
+				<li class="list-1"><a th:href="@{/blog/list}" class="list-2">記事一覧</a></li>
+				<li class="list-1"><a th:href="@{/blog/register}" class="list-2">記事登録</a></li>
+				<li class="list-1"><a th:href="@{/logout}" class="list-2">ログアウト</a></li>
+			</ul>
+		</div>
 
-    </header>
-    <div class="search">
-        <input class="searchInput"  type="text" id="searchInput" placeholder="キーワードを入力してください">
-        <button onclick="performSearch()">検索</button>
-    </div>
-    
-    <main>
-        <div>
-            <h2 class="h2">記事一覧</h2>
-            <div class="flex">
-                <article th:each="blog:${blogList}">
-                       <ul class="blog">
-                        <li>
-                            <a th:href="@{/blog/edit/{blogId}(blogId=${blog.blogId})}">
-                                <img th:src="@{/blog-img/{imagePath}(imagePath=${blog.blogImage})}" alt="" class="blog-img">
-                                <p th:text="${blog.blogTitle}">title</p><br>
-                                <p th:text="${blog.blogContent}">内容</p>
-                            </a>
-                        </li>
-                    </ul>
-                </article>
+	</header>
+	<div class="search">
+		<form th:action="@{/search}" method="post">
+			<input class="searchInput" type="text" name="searchKeywords" id="searchInput" placeholder="キーワードを入力してください">
+			<button>検索</button>
+		</form>
+	</div>
 
-
-
-
-            </div>
-
-            <ul class="next-back">
-                <li class="next-back-li"><a href="">back</a></li>
-                <li class="next-back-li"><a href="">next</a></li>
-            </ul>
-
-
-        </div>
+	<main>
+		<div>
+			<h2 class="h2">記事一覧</h2>
+			<div class="flex">
+				<article th:each="blog:${blogList}">
+					<ul class="blog">
+						<li>
+							<a th:href="@{/blog/edit/{blogId}(blogId=${blog.blogId})}">
+								<img th:src="@{/blog-img/{imagePath}(imagePath=${blog.blogImage})}" alt=""
+									class="blog-img">
+								<p th:text="${blog.blogTitle}">title</p><br>
+								<p th:text="${blog.blogContent}">内容</p>
+							</a>
+						</li>
+					</ul>
+				</article>
 
 
 
 
+			</div>
+
+			<ul class="next-back">
+				<li class="next-back-li"><a href="">back</a></li>
+				<li class="next-back-li"><a href="">next</a></li>
+			</ul>
 
 
-    </main>
-    <footer>
-        <small>&copy; 2023 youketu </small>
-    </footer>
+		</div>
+
+
+
+
+
+
+	</main>
+	<footer>
+		<small>&copy; 2023 youketu </small>
+	</footer>
 
 
 </body>

@@ -6,13 +6,19 @@ import org.springframework.stereotype.Service;
 import blog.com.models.dao.UsersDao;
 import blog.com.models.entity.UsersEntity;
 
+//serviceであること示す
 @Service
 public class UsersService {
+	// 自動でインスタンスの紐づけを行う
 	@Autowired
+	// UsersDaoを使うから、userDaoで宣言
 	private UsersDao usersDao;
 
+	/* Userアカウントを作るメソッド */
 	public boolean createUsers(String name, String email, String password) {
+		// 受け取だemailをentityで検索,結果はnullの場合
 		if (usersDao.findByEmail(email) == null) {
+			// 新しいUsersEntityとして name,email,passwordを保存
 			usersDao.save(new UsersEntity(name, email, password));
 			return true;
 		} else {
@@ -20,14 +26,15 @@ public class UsersService {
 		}
 	}
 
+	/* ログインをするメソッド */
 	public UsersEntity checkLogin(String email, String password) {
-		System.out.println("Service"+email);
-		System.out.println("Service"+password);
+		// 指定されたメール名とパスワードが一致するかを検索してuserEntityに格納する
 		UsersEntity usersEntity = usersDao.findByEmailAndPassword(email, password);
-
+		// 結果はnullの場合はnullを返す
 		if (usersEntity == null) {
 			return null;
 		} else {
+			// nullじゃない場合はusersEntityを返す;
 			return usersEntity;
 		}
 
