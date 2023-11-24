@@ -361,3 +361,192 @@
 2023-11-22T17:28:05.839+09:00  INFO 19088 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-11-22T17:28:05.842+09:00  INFO 19088 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-11-22T17:28:05.846+09:00  INFO 19088 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-22T17:35:13.984+09:00  INFO 18292 --- [main] blog.com.BlogYouketuApplication          : Starting BlogYouketuApplication using Java 17.0.8.1 with PID 18292 (C:\Users\Administrator\Desktop\Bolg\BlogYouketu\blogYouketu\target\classes started by Administrator in C:\Users\Administrator\Desktop\Bolg\BlogYouketu\blogYouketu)
+2023-11-22T17:35:13.987+09:00  INFO 18292 --- [main] blog.com.BlogYouketuApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-11-22T17:35:14.484+09:00  INFO 18292 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-22T17:35:14.534+09:00  INFO 18292 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2023-11-22T17:35:14.958+09:00  INFO 18292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-22T17:35:14.970+09:00  INFO 18292 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-22T17:35:14.970+09:00  INFO 18292 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-22T17:35:15.070+09:00  INFO 18292 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-22T17:35:15.070+09:00  INFO 18292 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1028 ms
+2023-11-22T17:35:15.192+09:00  INFO 18292 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-22T17:35:15.236+09:00  INFO 18292 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-22T17:35:15.238+09:00  INFO 18292 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-22T17:35:15.465+09:00  INFO 18292 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-22T17:35:15.492+09:00  INFO 18292 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-22T17:35:15.644+09:00  INFO 18292 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41e8d917
+2023-11-22T17:35:15.646+09:00  INFO 18292 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-22T17:35:16.433+09:00  INFO 18292 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-22T17:35:16.465+09:00  INFO 18292 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-22T17:35:16.822+09:00  WARN 18292 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-22T17:35:17.132+09:00  INFO 18292 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-22T17:35:17.139+09:00  INFO 18292 --- [main] blog.com.BlogYouketuApplication          : Started BlogYouketuApplication in 3.603 seconds (process running for 4.196)
+2023-11-22T17:38:25.955+09:00  INFO 18292 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-22T17:38:25.956+09:00  INFO 18292 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-22T17:38:25.956+09:00  INFO 18292 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-11-22T17:38:55.085+09:00 DEBUG 18292 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.user_id,u1_0.email,u1_0.password,u1_0.user_name from users u1_0 where u1_0.email=?
+2023-11-22T17:38:55.100+09:00 DEBUG 18292 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select nextval('users_seq')
+2023-11-22T17:38:55.121+09:00 DEBUG 18292 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : insert into users (email,password,user_name,user_id) values (?,?,?,?)
+2023-11-22T17:38:59.140+09:00 DEBUG 18292 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.user_id,u1_0.email,u1_0.password,u1_0.user_name from users u1_0 where u1_0.email=? and u1_0.password=?
+2023-11-22T17:38:59.176+09:00 DEBUG 18292 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:41:03.927+09:00 DEBUG 18292 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.user_id,u1_0.email,u1_0.password,u1_0.user_name from users u1_0 where u1_0.email=? and u1_0.password=?
+2023-11-22T17:41:03.934+09:00 DEBUG 18292 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:43:01.621+09:00 DEBUG 18292 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.user_id,u1_0.email,u1_0.password,u1_0.user_name from users u1_0 where u1_0.email=? and u1_0.password=?
+2023-11-22T17:43:01.626+09:00 DEBUG 18292 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:47:08.333+09:00 DEBUG 18292 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:48:14.600+09:00 DEBUG 18292 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=?
+2023-11-22T17:48:14.602+09:00 DEBUG 18292 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select nextval('blog_seq')
+2023-11-22T17:48:14.604+09:00 DEBUG 18292 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into blog (blog_content,blog_image,blog_title,user_id,blog_id) values (?,?,?,?,?)
+2023-11-22T17:48:14.609+09:00 DEBUG 18292 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:48:25.039+09:00 DEBUG 18292 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:50:19.894+09:00 DEBUG 18292 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_id=?
+2023-11-22T17:51:16.626+09:00 DEBUG 18292 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_id=?
+2023-11-22T17:51:16.630+09:00 DEBUG 18292 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : update blog set blog_content=?,blog_image=?,blog_title=?,user_id=? where blog_id=?
+2023-11-22T17:51:16.636+09:00 DEBUG 18292 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:51:18.477+09:00 DEBUG 18292 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:51:26.341+09:00 DEBUG 18292 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:52:43.461+09:00 DEBUG 18292 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_id=?
+2023-11-22T17:52:46.801+09:00 DEBUG 18292 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_id=?
+2023-11-22T17:52:46.804+09:00 DEBUG 18292 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : delete from blog where blog_id=?
+2023-11-22T17:52:46.810+09:00 DEBUG 18292 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:55:43.257+09:00 DEBUG 18292 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.user_id,u1_0.email,u1_0.password,u1_0.user_name from users u1_0 where u1_0.email=? and u1_0.password=?
+2023-11-22T17:55:43.262+09:00 DEBUG 18292 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:56:08.702+09:00 DEBUG 18292 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=?
+2023-11-22T17:56:08.704+09:00 DEBUG 18292 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : insert into blog (blog_content,blog_image,blog_title,user_id,blog_id) values (?,?,?,?,?)
+2023-11-22T17:56:08.709+09:00 DEBUG 18292 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:57:07.693+09:00 DEBUG 18292 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=?
+2023-11-22T17:57:07.694+09:00 DEBUG 18292 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : insert into blog (blog_content,blog_image,blog_title,user_id,blog_id) values (?,?,?,?,?)
+2023-11-22T17:57:07.698+09:00 DEBUG 18292 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:57:22.878+09:00 DEBUG 18292 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:57:24.008+09:00 DEBUG 18292 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_id=?
+2023-11-22T17:57:26.764+09:00 DEBUG 18292 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:57:36.021+09:00 DEBUG 18292 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T17:57:39.783+09:00 DEBUG 18292 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T17:57:43.921+09:00 DEBUG 18292 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T17:57:46.393+09:00 DEBUG 18292 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:57:50.504+09:00 DEBUG 18292 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T17:57:54.133+09:00 DEBUG 18292 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T17:57:55.113+09:00 DEBUG 18292 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:57:56.069+09:00 DEBUG 18292 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_id=?
+2023-11-22T17:57:59.088+09:00 DEBUG 18292 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:58:03.447+09:00 DEBUG 18292 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T17:58:08.265+09:00 DEBUG 18292 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T17:58:11.443+09:00 DEBUG 18292 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T17:58:15.615+09:00 DEBUG 18292 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:59:26.266+09:00 DEBUG 18292 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T17:59:31.500+09:00 DEBUG 18292 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.user_id,u1_0.email,u1_0.password,u1_0.user_name from users u1_0 where u1_0.email=? and u1_0.password=?
+2023-11-22T17:59:31.505+09:00 DEBUG 18292 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:59:38.366+09:00 DEBUG 18292 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T17:59:44.397+09:00 DEBUG 18292 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T17:59:46.123+09:00 DEBUG 18292 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T17:59:49.018+09:00 DEBUG 18292 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T17:59:50.220+09:00 DEBUG 18292 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T17:59:52.936+09:00 DEBUG 18292 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_id=?
+2023-11-22T17:59:55.584+09:00 DEBUG 18292 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_id=?
+2023-11-22T18:00:18.309+09:00 DEBUG 18292 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T18:00:20.984+09:00 DEBUG 18292 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T18:00:22.462+09:00 DEBUG 18292 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T18:00:24.182+09:00 DEBUG 18292 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T18:00:52.163+09:00 DEBUG 18292 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T18:00:55.553+09:00 DEBUG 18292 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T18:00:59.026+09:00 DEBUG 18292 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T18:00:59.527+09:00 DEBUG 18292 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T18:01:01.865+09:00 DEBUG 18292 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T18:01:04.194+09:00 DEBUG 18292 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T18:01:08.196+09:00 DEBUG 18292 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T18:01:19.463+09:00 DEBUG 18292 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T18:01:28.195+09:00 DEBUG 18292 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T18:03:04.749+09:00 DEBUG 18292 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T18:04:01.615+09:00 DEBUG 18292 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_id=?
+2023-11-22T18:04:03.685+09:00 DEBUG 18292 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T18:04:09.837+09:00 DEBUG 18292 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T18:05:24.845+09:00 DEBUG 18292 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T18:06:01.050+09:00 DEBUG 18292 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T18:06:03.412+09:00 DEBUG 18292 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T18:20:06.545+09:00 DEBUG 18292 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.user_id,u1_0.email,u1_0.password,u1_0.user_name from users u1_0 where u1_0.email=? and u1_0.password=?
+2023-11-22T18:20:06.552+09:00 DEBUG 18292 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T18:20:18.417+09:00  INFO 18292 --- [RMI TCP Connection(48)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-11-22T18:20:18.426+09:00  INFO 18292 --- [RMI TCP Connection(48)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-22T18:20:18.428+09:00  INFO 18292 --- [RMI TCP Connection(48)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-22T18:20:18.433+09:00  INFO 18292 --- [RMI TCP Connection(48)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-22T18:20:18.435+09:00  INFO 18292 --- [RMI TCP Connection(48)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-22T18:20:18.436+09:00  INFO 18292 --- [RMI TCP Connection(48)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-22T22:08:31.941+09:00  INFO 10528 --- [main] blog.com.BlogYouketuApplication          : Starting BlogYouketuApplication using Java 17.0.8.1 with PID 10528 (C:\Users\Administrator\Desktop\Bolg\BlogYouketu\blogYouketu\target\classes started by Administrator in C:\Users\Administrator\Desktop\Bolg\BlogYouketu\blogYouketu)
+2023-11-22T22:08:31.943+09:00  INFO 10528 --- [main] blog.com.BlogYouketuApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-11-22T22:08:32.382+09:00  INFO 10528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-22T22:08:32.430+09:00  INFO 10528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2023-11-22T22:08:32.781+09:00  INFO 10528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-22T22:08:32.789+09:00  INFO 10528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-22T22:08:32.789+09:00  INFO 10528 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-22T22:08:32.871+09:00  INFO 10528 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-22T22:08:32.871+09:00  INFO 10528 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 896 ms
+2023-11-22T22:08:32.976+09:00  INFO 10528 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-22T22:08:33.016+09:00  INFO 10528 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-22T22:08:33.018+09:00  INFO 10528 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-22T22:08:33.214+09:00  INFO 10528 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-22T22:08:33.236+09:00  INFO 10528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-22T22:08:33.375+09:00  INFO 10528 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41e8d917
+2023-11-22T22:08:33.377+09:00  INFO 10528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-22T22:08:34.038+09:00  INFO 10528 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-22T22:08:34.073+09:00  INFO 10528 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-22T22:08:34.350+09:00  WARN 10528 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-22T22:08:34.596+09:00  INFO 10528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-22T22:08:34.603+09:00  INFO 10528 --- [main] blog.com.BlogYouketuApplication          : Started BlogYouketuApplication in 2.951 seconds (process running for 3.476)
+2023-11-22T22:08:59.246+09:00  INFO 10528 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-22T22:08:59.246+09:00  INFO 10528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-22T22:08:59.247+09:00  INFO 10528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-22T22:09:06.327+09:00 DEBUG 10528 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.user_id,u1_0.email,u1_0.password,u1_0.user_name from users u1_0 where u1_0.email=? and u1_0.password=?
+2023-11-22T22:09:06.372+09:00 DEBUG 10528 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T22:09:09.705+09:00 DEBUG 10528 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T22:09:12.675+09:00 DEBUG 10528 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T22:09:15.365+09:00 DEBUG 10528 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_id=?
+2023-11-22T22:09:19.361+09:00 DEBUG 10528 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T22:12:25.674+09:00 DEBUG 10528 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T22:16:01.682+09:00 DEBUG 10528 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_id=?
+2023-11-22T22:16:13.919+09:00 DEBUG 10528 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.user_id,u1_0.email,u1_0.password,u1_0.user_name from users u1_0 where u1_0.email=? and u1_0.password=?
+2023-11-22T22:16:13.926+09:00 DEBUG 10528 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T22:16:27.657+09:00 DEBUG 10528 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T22:16:35.331+09:00 DEBUG 10528 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_title=? or b1_0.blog_content=?
+2023-11-22T22:17:03.678+09:00 DEBUG 10528 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.user_id,u1_0.email,u1_0.password,u1_0.user_name from users u1_0 where u1_0.email=? and u1_0.password=?
+2023-11-22T22:17:03.684+09:00 DEBUG 10528 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T22:18:24.037+09:00 DEBUG 10528 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0 where b1_0.blog_id=?
+2023-11-22T22:18:27.819+09:00 DEBUG 10528 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T22:18:49.863+09:00  INFO 10528 --- [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-11-22T22:18:49.874+09:00  INFO 10528 --- [RMI TCP Connection(12)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-22T22:18:49.878+09:00  INFO 10528 --- [RMI TCP Connection(12)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-22T22:18:49.883+09:00  INFO 10528 --- [RMI TCP Connection(12)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-22T22:18:49.885+09:00  INFO 10528 --- [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-22T22:18:49.888+09:00  INFO 10528 --- [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-22T22:48:38.750+09:00  INFO 17216 --- [main] blog.com.BlogYouketuApplication          : Starting BlogYouketuApplication using Java 17.0.8.1 with PID 17216 (C:\Users\Administrator\Desktop\Bolg\BlogYouketu\blogYouketu\target\classes started by Administrator in C:\Users\Administrator\Desktop\Bolg\BlogYouketu\blogYouketu)
+2023-11-22T22:48:38.752+09:00  INFO 17216 --- [main] blog.com.BlogYouketuApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-11-22T22:48:39.163+09:00  INFO 17216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-22T22:48:39.214+09:00  INFO 17216 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.
+2023-11-22T22:48:39.545+09:00  INFO 17216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-22T22:48:39.552+09:00  INFO 17216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-22T22:48:39.552+09:00  INFO 17216 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-22T22:48:39.634+09:00  INFO 17216 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-22T22:48:39.634+09:00  INFO 17216 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 851 ms
+2023-11-22T22:48:39.739+09:00  INFO 17216 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-22T22:48:39.778+09:00  INFO 17216 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-22T22:48:39.780+09:00  INFO 17216 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-22T22:48:39.970+09:00  INFO 17216 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-22T22:48:39.988+09:00  INFO 17216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-22T22:48:40.120+09:00  INFO 17216 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3b57f915
+2023-11-22T22:48:40.121+09:00  INFO 17216 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-22T22:48:40.737+09:00  INFO 17216 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-22T22:48:40.768+09:00  INFO 17216 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-22T22:48:41.034+09:00  WARN 17216 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-22T22:48:41.264+09:00  INFO 17216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-22T22:48:41.270+09:00  INFO 17216 --- [main] blog.com.BlogYouketuApplication          : Started BlogYouketuApplication in 2.839 seconds (process running for 3.732)
+2023-11-22T22:48:58.564+09:00  INFO 17216 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-22T22:48:58.564+09:00  INFO 17216 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-22T22:48:58.565+09:00  INFO 17216 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-22T22:49:54.624+09:00 DEBUG 17216 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.user_id,u1_0.email,u1_0.password,u1_0.user_name from users u1_0 where u1_0.email=? and u1_0.password=?
+2023-11-22T22:49:54.667+09:00 DEBUG 17216 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select b1_0.blog_id,b1_0.blog_content,b1_0.blog_image,b1_0.blog_title,b1_0.user_id from blog b1_0
+2023-11-22T22:51:40.243+09:00  INFO 17216 --- [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-11-22T22:51:40.252+09:00  INFO 17216 --- [RMI TCP Connection(5)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-22T22:51:40.253+09:00  INFO 17216 --- [RMI TCP Connection(5)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-22T22:51:40.258+09:00  INFO 17216 --- [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-22T22:51:40.259+09:00  INFO 17216 --- [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-22T22:51:40.261+09:00  INFO 17216 --- [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
